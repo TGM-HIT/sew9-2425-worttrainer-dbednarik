@@ -13,6 +13,11 @@ public class Rechtschreibtrainer {
 
     }
 
+    public Rechtschreibtrainer(List<WortEintrag> wortliste, Statistik statistik) {
+        this.wortliste = wortliste;
+        this.statistik = statistik;
+    }
+
     public void zufaelligerEintrag() {
         this.aktuellerEintrag = (int) (Math.random() * wortliste.size());
     }
@@ -47,5 +52,9 @@ public class Rechtschreibtrainer {
 
     public Statistik getStatistik() {
         return this.statistik;
+    }
+
+    public List<WortEintrag> getWortliste() {
+        return wortliste;
     }
 }

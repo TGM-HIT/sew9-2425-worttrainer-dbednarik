@@ -34,4 +34,13 @@ public class Statistik {
     {
         return this.versuche - this.richtigeAntworten;
     }
+
+
+    public void setRichtigeAntworten(int richtigeAntworten) {
+        this.richtigeAntworten = richtigeAntworten;
+    }
+
+    public void setVersuche(int versuche) {
+        this.versuche = versuche;
+    }
 }
