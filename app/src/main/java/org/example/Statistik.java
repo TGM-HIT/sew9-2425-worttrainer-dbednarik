@@ -1,5 +1,11 @@
 package org.example;
 
+/**
+ * Die Klasse Statistik verfolgt die Anzahl der Versuche und richtigen Antworten eines Nutzers.
+ * @version 1.0
+ * @autor davidbednarik
+ */
+
 // Die Klasse Statistik verfolgt die Anzahl der Versuche und richtigen Antworten eines Nutzers.
 public class Statistik {
     private int versuche;  // Speichert die Gesamtanzahl der Versuche

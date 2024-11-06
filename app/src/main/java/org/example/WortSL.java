@@ -7,6 +7,15 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Die Klasse WortSL bietet Methoden zum Speichern und Laden von Rechtschreibtrainern in eine JSON-Datei.
+ * @version 1.0
+ * @autor davidbednarik
+ */
+
+
+
+
 // Die Klasse WortSL bietet Methoden zum Speichern und Laden von Rechtschreibtrainern in eine JSON-Datei.
 public class WortSL {
     private final String DEFAULT_SAVE = "../Worttrainer.json"; // Standardpfad für die Speicherdatei

@@ -1,6 +1,16 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Die Klasse Rechtschreibtrainer stellt einen Trainer zur Überprüfung der Rechtschreibung zur Verfügung.
+ *
+ * @version 1.0
+ * @autor davidbednarik
+ */
+
+
 
 // Die Klasse Rechtschreibtrainer stellt einen Trainer zur Überprüfung der Rechtschreibung zur Verfügung.
 // Sie verwaltet eine Liste von WortEinträgen und behält Statistiken über die Benutzereingaben.
@@ -11,7 +21,13 @@ public class Rechtschreibtrainer {
 
     // Konstruktor, der eine Liste von WortEinträgen entgegennimmt und eine neue Statistik erstellt.
     public Rechtschreibtrainer(List<WortEintrag> wortliste) {
-        this.wortliste = wortliste;
+        this.wortliste = new ArrayList<>();
+        for (WortEintrag wortEintrag : wortliste) {
+            if (wortEintrag.getDefect() == false) {
+                this.wortliste.add(wortEintrag);
+
+            }
+        }
         this.statistik = new Statistik();
     }
 

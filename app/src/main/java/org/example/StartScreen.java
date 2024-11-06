@@ -4,6 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 
+/**
+ * Die Klasse StartScreen erstellt den Startbildschirm der Anwendung Worttrainer.
+ * @version 1.0
+ * @autor davidbednarik
+ */
+
+
 // Die Klasse StartScreen erstellt den Startbildschirm der Anwendung Worttrainer.
 public class StartScreen extends JFrame {
     public JButton start;  // Button zum Starten eines neuen Spiels

@@ -3,6 +3,13 @@ package org.example;
 import javax.swing.*;
 import java.awt.*;
 import java.net.MalformedURLException;
+/**
+ * Die Klasse GUIFenster erstellt das Hauptfenster der Anwendung für den Worttrainer.
+ * @version 1.0
+ * @autor davidbednarik
+ */
+
+
 
 // Die Klasse GUIFenster erstellt das Hauptfenster der Anwendung für den Worttrainer.
 public class GUIFenster extends JFrame {

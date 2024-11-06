@@ -3,10 +3,20 @@ package org.example;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Speichert ein Wort und eine URL.
+ *
+ * @author davidbednarik
+ * @version 1.0
+ */
+
+
+
 // Die Klasse WortEintrag repräsentiert einen Eintrag mit einem Wort und einer URL.
 public class WortEintrag {
     private String word;  // Speichert das Wort
-    private String url;   // Speichert die URL
+    private String url;
+    private boolean defect; // Speichert die URL
 
     // Konstruktor, der ein Wort und eine URL entgegennimmt und überprüft, ob die URL gültig ist.
     public WortEintrag(String word, String url)
@@ -21,7 +31,7 @@ public class WortEintrag {
     }
 
     // Statische Methode zur Überprüfung, ob die übergebene URL gültig ist.
-    public static boolean checkURL(String url) {
+    public boolean checkURL(String url) {
         // Überprüfen, ob die URL mit "http://" oder "https://" beginnt.
         if(url.startsWith("http://") || url.startsWith("https://"))
         {
@@ -33,8 +43,10 @@ public class WortEintrag {
                 return true;
             }
         }
+        this.defect = true;
         // Wenn die URL nicht dem Muster entspricht oder nicht mit "http://" oder "https://" beginnt, ist sie ungültig.
-        return false;
+        return true;
+
     }
 
     // Gibt das gespeicherte Wort zurück.
@@ -45,5 +57,8 @@ public class WortEintrag {
     // Gibt die gespeicherte URL zurück.
     public String getUrl() {
         return url;
+    }
+    public boolean getDefect() {
+        return defect;
     }
 }
