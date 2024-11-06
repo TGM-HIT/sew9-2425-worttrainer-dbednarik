@@ -12,6 +12,9 @@ public class WortEintrag {
     {
         if(word.equals("") || !checkURL(url))
             throw new IllegalArgumentException();
+
+        this.word = word;
+        this.url = url;
     }
 
     public static boolean checkURL(String url) {

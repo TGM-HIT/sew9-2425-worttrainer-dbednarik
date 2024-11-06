@@ -23,9 +23,14 @@ public class WortSL {
     public void save(Rechtschreibtrainer tr, String path)
         throws IOException
     {
+        JSONObject stats = new JSONObject();
+        stats.put("versuche", tr.getStatistik().getVersuche());
+        stats.put("richtigeAntworten", tr.getStatistik().getRichtigeAntworten());
+
+
         JSONObject trainer = new JSONObject();
         trainer.put("wortliste", tr.getWortliste());
-        trainer.put("statistik", tr.getStatistik());
+        trainer.put("statistik", stats);
 
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(path)))
         {
