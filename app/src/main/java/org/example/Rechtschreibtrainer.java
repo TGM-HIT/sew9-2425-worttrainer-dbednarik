@@ -5,6 +5,8 @@ import java.util.List;
 
 /**
  * Die Klasse Rechtschreibtrainer stellt einen Trainer zur Überprüfung der Rechtschreibung zur Verfügung.
+ * Es verwaltet eine Liste von WortEinträgen und behält Statistiken über die Benutzereingaben.
+ * Und es überprüft, ob das eingegebene Wort mit dem aktuellen Wort übereinstimmt.
  *
  * @version 1.0
  * @autor davidbednarik
