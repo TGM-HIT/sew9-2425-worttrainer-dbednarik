@@ -11,4 +11,5 @@ public class AppTest {
         Controller classUnderTest = new Controller();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+
 }

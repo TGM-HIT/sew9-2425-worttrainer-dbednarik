@@ -7,6 +7,11 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.List;
 
+/**
+ *
+ *
+ */
+
 // Die Klasse Controller verwaltet die Benutzerinteraktionen und steuert den Ablauf der Anwendung.
 public class Controller implements ActionListener {
     private Rechtschreibtrainer trainer;  // Instanz des Rechtschreibtrainers zur Verwaltung von Wörtern und Statistiken
