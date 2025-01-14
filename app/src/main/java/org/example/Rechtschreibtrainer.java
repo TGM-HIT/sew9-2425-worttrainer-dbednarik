@@ -20,6 +20,7 @@ public class Rechtschreibtrainer {
     private List<WortEintrag> wortliste;  // Liste von WortEinträgen, die der Trainer verwendet
     private Statistik statistik;  // Statistik-Objekt zur Verfolgung der richtigen und falschen Antworten
     private int aktuellerEintrag;  // Index des aktuell zu überprüfenden Wortes in der wortliste
+    private int letzterEintrag = -1;  // Index des zuletzt überprüften Wortes in der wortliste
 
     // Konstruktor, der eine Liste von WortEinträgen entgegennimmt und eine neue Statistik erstellt.
     public Rechtschreibtrainer(List<WortEintrag> wortliste) {
@@ -41,7 +42,18 @@ public class Rechtschreibtrainer {
 
     // Wählt zufällig einen Eintrag aus der Wortliste aus.
     public void zufaelligerEintrag() {
-        this.aktuellerEintrag = (int) (Math.random() * wortliste.size());
+        if (wortliste.size() <= 1) {
+            this.aktuellerEintrag = 0;
+            return;
+        }
+
+        int neuerEintrag;
+        do {
+            neuerEintrag = (int) (Math.random() * wortliste.size());
+        } while (neuerEintrag == letzterEintrag);
+
+        letzterEintrag = neuerEintrag;
+        this.aktuellerEintrag = neuerEintrag;
     }
 
     // Gibt den aktuell ausgewählten WortEintrag zurück. Falls kein Eintrag ausgewählt wurde, wird zufällig einer ausgewählt.
