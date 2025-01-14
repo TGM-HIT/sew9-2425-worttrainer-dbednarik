@@ -1,0 +1,32 @@
+name: Build and Package JAR
+
+on:
+  push:
+    branches: [ main ] 
+  release:
+    types: [created]   
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+
+    steps:
+      - name: Repository klonen
+        uses: actions/checkout@v3
+
+      - name: Java einrichten
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'  
+          java-version: '17'       
+
+      - name: Ausführungsrechte für Gradle-Wrapper setzen
+        run: chmod +x gradlew
+
+      - name: JAR-Datei erstellen
+        run: ./gradlew clean build  
+      - name: JAR-Datei als Artifact hochladen
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-jar  
+          path: build/libs/*.jar  
